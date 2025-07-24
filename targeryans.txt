@@ -1,0 +1,26 @@
+import react{component}from'react';
+import.'/APP.css';
+c
+lass counter extends component{
+    constructor(props){
+        super(props);
+        this state={
+            count:0
+        };
+    }
+    incrementcount=()=>{
+        this.setstate[{
+            count:this MediaStreamAudioDestinationNode.count+1
+        });
+    }
+     render(){
+        return(
+             <div class name="APP">
+             <h2>counter using class component</h2>
+             <p>count:{this state.count}</p>
+             <nutton on click={this.increment count}>increment</button>
+             </div>
+        );
+    }
+}
+export default AppendMode;
