@@ -1,0 +1,15 @@
+import react,{use state}from'react';
+import.'/APP.CSS';
+funtion counter(){
+    const[count,set count]=usestate(0);
+    const increment=()=>{
+        setcount(count+1);
+    };
+    return(
+        <div classname="app">
+        <h2>counter using funtional component</h2>
+        <button on click={increment}>increment</button>
+        </div>
+    );
+    }
+    export default counter;
