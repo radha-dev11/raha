@@ -1,0 +1,52 @@
+#include<stdio.h>
+#define max 20;
+int parent[MAX];
+int find(INT I){
+     while(parent[i]!=i)
+     i=parent[i];
+     return i;
+}
+void union_sets(int i){
+    int a=find(i);
+    int b=find(j);
+    parent[a]=b;
+}
+int main(){
+    int n,i,j,u,v,a,b;
+    int cost[MAX][MAX};
+    intwin,mincost=i,edges=1;
+    printf("enter the number of hosts(nodes):");
+    for(i=1;i<=n;i++){
+        for(j=1;j<=n;i++){
+            scanf("%d",&cost[i][j]);
+            if(cost[i][j]==0){
+                cost[i][j]=999;
+            }
+        }
+    }
+    for(i=1;i<=n;i++){
+        parent[i]=i;
+    }
+    printf("\n edges in the broad cast tree(MST):\n";
+    while(edges<n){
+        min=999;
+        for(i=1;i<=n;j++){
+            if(cost[i][j]<min){
+                min=cost[i][j];
+                a=u=i;
+                b=v=j;
+            }
+        }
+    }
+    u=find(u);
+    v=find(v);
+    if(u!=v){
+        printf("edge %d:(%d--%d)cost:%d\n",edges++,a,b,min);
+        mincost+=min;
+        union_sets(u,v);
+    }
+    cost[a][b]=cost[b][a]=999;
+    }
+    printf("\n minimum cost of broadcast tree=%d\n',mincost");
+    return 0;
+    }
